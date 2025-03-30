@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="ha_ki_ha.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Question 1 -->
+    <div class="question" id="q1">
+        <p>1. How are you feeling today? 😊</p>
+        <button onclick="nextQuestion('बहुत बढ़िया')">बहुत बढ़िया</button>
+        <button onclick="nextQuestion('ज़बरदस्त!')">ज़बरदस्त!</button>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question" id="q2" style="display:none;">
+        <p>2. How do you feel when you talk to me? ❤️</p>
+        <button onclick="nextQuestion('Nice!')">Nice!</button>
+        <button onclick="nextQuestion('Amazing!')">Amazing!</button>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question" id="q3" style="display:none;">
+        <p>3. Will you go on a date with me? 🥰</p>
+        <button onclick="nextQuestion('Yes')">Yes</button>
+        <button id="noBtn" onmouseover="moveNo()">No</button>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question" id="q4" style="display:none;">
+        <p>4. I really want to meet you… do you feel the same? 🥺</p>
+        <button onclick="nextQuestion('Yes')">Yes</button>
+        <button onclick="nextQuestion('No')">No</button>
+    </div>
+
+    <!-- Final Question -->
+    <div class="question" id="q5" style="display:none;">
+        <p>5. Do you like me? 💖</p>
+        <button onclick="finalResponse('Haan')">Haan</button>
+        <button onclick="finalResponse('Nahi')">Nahi</button>
+    </div>
+
+    <!-- Message Box at the End -->
+    <div id="response" style="display:none;">
+        <p>Send me a final message... 💌</p>
+        <textarea id="messageBox" rows="4" cols="50" placeholder="Write something..."></textarea><br>
+        <button onclick="sendMessage()">Send ❤️</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
